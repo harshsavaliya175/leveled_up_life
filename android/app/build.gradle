@@ -51,6 +51,21 @@ android {
         versionName flutterVersionName
     }
 
+    flavorDimensions "app"
+
+    productFlavors {
+        dev {
+            dimension "app"
+            resValue "string", "app_name", "Leveled Up Life"
+            versionNameSuffix "-dev"
+        }
+        prod {
+            dimension "app"
+            resValue "string", "app_name", "Leveled Up Life"
+            applicationId "com.leveled_up_life.leveled_up_life"
+        }
+    }
+
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.
