@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-
-import '../../core/constants/app_colors.dart';
+import 'package:leveled_up_life/core/constants/app_colors.dart';
 
 class AppTextField extends StatelessWidget {
+  final TextEditingController? controller;
   final TextInputAction action;
   final TextInputType type;
   final String hintText;
   final bool? obscureText;
-  final Function(String? val)? onChange;
+  final Function(String val) onChange;
   final Widget? suffixIcon;
   final Widget? prefixIcon;
   final Color? fillColor;
@@ -18,13 +18,15 @@ class AppTextField extends StatelessWidget {
   final int? maxLines;
   final bool? readOnly;
   final String? initialValue;
+  final Color? textColor;
+  final VoidCallback? onTap;
 
   const AppTextField({
     super.key,
     required this.action,
     required this.type,
     required this.hintText,
-    this.onChange,
+    required this.onChange,
     this.suffixIcon,
     this.obscureText,
     this.prefixIcon,
@@ -36,16 +38,24 @@ class AppTextField extends StatelessWidget {
     this.maxLines,
     this.readOnly,
     this.initialValue,
+    this.textColor,
+    this.onTap,
+    this.controller,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      initialValue: initialValue ?? '',
-      style: const TextStyle(
-        fontFamily: 'AvenirNextLTPro',
+      controller: controller,
+      onTap: onTap != null
+          ? () {
+              onTap!();
+            }
+          : null,
+      initialValue: initialValue,
+      style: TextStyle(
         fontSize: 16,
-        color: lightBlackColor,
+        color: textColor ?? lightBlackColor,
       ),
       cursorColor: lightBlackColor,
       obscureText: obscureText ?? false,
@@ -55,7 +65,9 @@ class AppTextField extends StatelessWidget {
       textInputAction: action,
       maxLength: maxLength ?? TextField.noMaxLength,
       textCapitalization: textCapitalization ?? TextCapitalization.words,
-      onChanged: onChange,
+      onChanged: (value) {
+        onChange(value);
+      },
       maxLines: maxLines ?? 1,
       decoration: InputDecoration(
         counterText: '',
@@ -65,11 +77,22 @@ class AppTextField extends StatelessWidget {
           left: 12,
           right: 12,
         ),
-        fillColor: fillColor,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(radius ?? 12),
+          borderSide: const BorderSide(color: Colors.transparent),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(radius ?? 12),
+          borderSide: const BorderSide(color: Colors.transparent),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(radius ?? 12),
+          borderSide: const BorderSide(color: Colors.transparent),
+        ),
+        fillColor: fillColor ?? Colors.white,
         filled: true,
         hintStyle: hintStyle ??
             const TextStyle(
-              fontFamily: 'AvenirNextLTPro',
               fontSize: 16,
               color: lightGreyColor,
             ),

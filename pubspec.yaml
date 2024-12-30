@@ -35,32 +35,98 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+
+  # Branch io (Deep Link)
+  flutter_branch_sdk: ^8.2.0
+
   # for state management
-  flutter_bloc: ^8.1.5
+  flutter_bloc: ^8.1.6
+
   # To save data locally
-  shared_preferences: ^2.2.3
+  shared_preferences: ^2.3.2
+
   # for localization
   easy_localization: ^3.0.7
+
   # Assets generator
-  flutter_gen: ^5.5.0+1
+  flutter_gen: ^5.7.0
   flutter_svg: ^2.0.10+1
+
   # for google fonts
   google_fonts: ^6.2.1
+
   # Device info
   device_info_plus: ^10.1.0
   package_info_plus: ^8.0.0
+
   # Freezed code generator for data classes
-  freezed_annotation: ^2.4.1
+  freezed_annotation: ^2.4.4
   json_annotation: ^4.9.0
+
   # for device preview
-  device_preview: ^1.1.0
+  device_preview: ^1.2.0
+
+  # for show chart
+  syncfusion_flutter_charts: ^27.1.50
+
   # for spacing
   gap: ^3.0.1
+
+  # apply fix text size
+  auto_size_text: ^3.0.0
+
   # To pick files
-  image_picker: ^1.1.1
+  image_picker: ^1.1.2
+
+  # for share item
+  share_plus: ^9.0.0
+
   # for Permissions
   permission_handler: ^11.3.1
+
+  # for sliding widget like bottom sheet
+  flutter_sliding_up_panel: ^2.1.1
+
+  # for show page view indicator
+  smooth_page_indicator: ^1.2.0
+
+  # for percent indicator
+  percent_indicator: ^4.2.3
+
+  # for navigation
+  go_router: ^14.2.1
+
+  # for show loading indicator
+  flutter_easyloading: ^3.0.5
+
+  # For dotted border
+  dotted_border: ^2.1.0
+
+  # Service Injection
+  get_it: ^8.0.0
+
+  # for html view
+  flutter_widget_from_html: ^0.15.1
+
+  # To get directory paths
+  path_provider: ^2.1.4
+
+  # for notification
+  flutter_local_notifications: ^17.2.1+2
+  firebase_core: ^3.2.0
+  firebase_messaging: ^15.0.3
+
+  # for add subscription
+  in_app_purchase: ^3.2.0
+
   # for api calls
+  dio: ^5.5.0+1
+
+  advanced_in_app_review: ^1.2.1
+
+  # for url launcher
+  url_launcher: ^6.3.0
+
   codonnier_network:
     git:
       url: https://github.com/priyankgandhi0/codonnier_network.git
@@ -69,10 +135,10 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  build_runner: ^2.4.9
+  build_runner: ^2.4.11
   freezed: ^2.5.2
   json_serializable: ^6.8.0
-  flutter_gen_runner: ^5.4.0
+  flutter_gen_runner: ^5.6.0
   flutter_lints: ^4.0.0
 
 flutter_gen:
@@ -115,9 +181,18 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: AvenirNextLTPro
+    - family: AvenirNextRegular
       fonts:
-        - asset: assets/fonts/AvenirNextLTPro-Regular.otf
+        - asset: assets/fonts/AvenirNextCyr-Regular.ttf
+    - family: AvenirNextBold
+      fonts:
+        - asset: assets/fonts/AvenirNextCyr-Bold.ttf
+    - family: AvenirNextMedium
+      fonts:
+        - asset: assets/fonts/AvenirNextCyr-Medium.ttf
+    - family: AvenirNextDemi
+      fonts:
+        - asset: assets/fonts/AvenirNextCyr-Demi.ttf
   # fonts:
   #   - family: Schyler
   #     fonts:

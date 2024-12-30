@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "619798136044",
+    "project_id": "leveled-up-life",
+    "storage_bucket": "leveled-up-life.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:619798136044:android:97e1163f6e9b3f440cd1c9",
+        "android_client_info": {
+          "package_name": "com.app.leveled_up_life"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCEZ6JpMegMaPrNMnM5_YUXgalnozEjTg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

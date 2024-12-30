@@ -10,6 +10,15 @@
 class FontFamily {
   FontFamily._();
 
-  /// Font family: AvenirNextLTPro
-  static const String avenirNextLTPro = 'AvenirNextLTPro';
+  /// Font family: AvenirNextBold
+  static const String avenirNextBold = 'AvenirNextBold';
+
+  /// Font family: AvenirNextDemi
+  static const String avenirNextDemi = 'AvenirNextDemi';
+
+  /// Font family: AvenirNextMedium
+  static const String avenirNextMedium = 'AvenirNextMedium';
+
+  /// Font family: AvenirNextRegular
+  static const String avenirNextRegular = 'AvenirNextRegular';
 }

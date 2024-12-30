@@ -2,10 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Leveled Up Life</string>
+	<string>Morning Discipline Journal</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -20,9 +22,32 @@
 	<string>$(FLUTTER_BUILD_NAME)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.app.leveleduplife</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>leveleduplife</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Play using while you are hiking</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Allow this app to access your camera</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Used to capture audio for image picker plugin</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Allow this app to access your photos</string>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
@@ -31,19 +56,22 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>UISupportedInterfaceOrientations~ipad</key>
+	<key>branch_key</key>
+	<dict>
+		<key>live</key>
+		<string>key_live_oxcSJDDW7bwGtqehzLuVhamdxvm26wD3</string>
+		<key>test</key>
+		<string>key_test_azcHLCq4WlCKqCkbFUwRhpbiqsmZ7tJo</string>
+	</dict>
+	<key>branch_test_mode</key>
+	<true/>
+	<key>branch_universal_link_domains</key>
 	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>75plg.app.link</string>
+		<string>75plg-alternate.app.link</string>
+		<string>75plg.test-app.link</string>
+		<string>75plg-alternate.test-app.link</string>
 	</array>
-	<key>CADisableMinimumFrameDurationOnPhone</key>
-	<true/>
-	<key>UIApplicationSupportsIndirectInputEvents</key>
-	<true/>
 </dict>
 </plist>
